@@ -4,5 +4,6 @@
   "dependencies": {
     "irc": "*",
     "steam": "0.6.x"
-  }
+  },
+  "scripts": { "start": "node bot.js" }
 }
