@@ -1,6 +1,5 @@
 var Steam = require('steam');
 var fs = require('fs');
-var irc = require('irc');
 
 // if we've saved a server list, use it
 if (fs.existsSync('servers')) {
@@ -25,7 +24,7 @@ module.exports = function(details) {
 
   //var options = true;
 
-  var irc = new irc.Client(details.server, details.nick, {
+  var irc = new (require('irc')).Client(details.server, details.nick, {
     port: details.port,
     //debug: true,
     //secure: options,
