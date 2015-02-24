@@ -22,12 +22,12 @@ module.exports = function(details) {
     }
   }
 
-  //var options = true;
+  var options = true;
 
   var irc = new (require('irc')).Client(details.server, details.nick, {
     port: details.port,
     //debug: true,
-    //secure: options,
+    secure: options,
     channels: [details.channel]
   });
 
